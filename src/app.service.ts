@@ -21,12 +21,23 @@ export class AppService {
 
   private saveLogsToTxt(body: PostLogsRequestDto) {
     const fs = require('fs');
-    fs.writeFile('logs.txt', body.log.join('\n'), (err: any) => {
+    fs.appendFile('logs.txt', body.log.join('\n') + '\n', (err: any) => {
       if (err) {
         console.error(err);
         throw err;
       }
       console.log('Logs saved');
+    });
+  }
+
+  deleteLogs() {
+    const fs = require('fs');
+    fs.unlink('logs.txt', (err: any) => {
+      if (err) {
+        console.error(err);
+        throw err;
+      }
+      console.log('Logs deleted');
     });
   }
 }

@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { PostLogsRequestDto } from './models/postLogsRequest.dto';
 
@@ -14,5 +14,10 @@ export class AppController {
   @Post()
   postLog(@Body() request: PostLogsRequestDto) {
     this.appService.postLog(request);
+  }
+
+  @Delete()
+  deleteLogs() {
+    this.appService.deleteLogs();
   }
 }
