@@ -4,7 +4,9 @@ import { PostLogsRequestDto } from './models/postLogsRequest.dto';
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello World!';
+    // return txt content
+    const fs = require('fs');
+    return fs.readFileSync('logs.txt', 'utf8');
   }
 
   postLog(body: PostLogsRequestDto): void {
