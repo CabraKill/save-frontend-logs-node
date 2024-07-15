@@ -6,7 +6,12 @@ export class AppService {
   getHello(): string {
     // return txt content
     const fs = require('fs');
-    return fs.readFileSync('logs.txt', 'utf8');
+    const filePath = 'logs.txt';
+    if (fs.existsSync(filePath)) {
+      return fs.readFileSync(filePath, 'utf8');
+    } else {
+      return 'No logs found.';
+    }
   }
 
   postLog(body: PostLogsRequestDto): void {
