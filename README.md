@@ -28,6 +28,16 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Digital ocean
+* Build Command
+```bash
+npm run build
+```
+* Run Command
+```
+npm run start:prod
+```
+
 ## Installation
 
 ```bash
