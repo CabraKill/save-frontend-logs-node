@@ -28,7 +28,7 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Digital ocean
+## Digital Ocean
 * Build Command
 ```bash
 npm run build
@@ -37,6 +37,9 @@ npm run build
 ```
 npm run start:prod
 ```
+
+# Port
+Expose the port 3000
 
 ## Installation
 
